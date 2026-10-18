@@ -1,59 +1,49 @@
-# PlaceHoldeApi
+# JSONPlaceholderAPI
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.1.
+Aplicación web creada con Angular 22.
 
-## Development server
+## Estado actual del proyecto
 
-To start a local development server, run:
+Actualmente el repositorio contiene una aplicación Angular en estado base (plantilla inicial del framework):
 
-```bash
-ng serve
-```
+- Muestra una vista de bienvenida por defecto de Angular.
+- Define un `router-outlet`, pero no tiene rutas configuradas (`src/app/app.routes.ts` está vacío).
+- No implementa todavía lógica de consumo de API ni endpoints propios.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Tecnologías usadas
 
-## Code scaffolding
+- Angular 22
+- TypeScript
+- SCSS
+- Vitest (a través de `ng test`)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Requisitos
 
-```bash
-ng generate component component-name
-```
+- Node.js y npm instalados
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## Instalación
 
 ```bash
-ng build
+npm install
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Ejecución en desarrollo
 
 ```bash
-ng test
+npm start
 ```
 
-## Running end-to-end tests
+La aplicación quedará disponible en `http://localhost:4200/`.
 
-For end-to-end (e2e) testing, run:
+## Scripts disponibles
+
+- `npm start`: levanta el servidor de desarrollo (`ng serve`).
+- `npm run build`: genera el build de producción (`ng build`).
+- `npm run watch`: compila en modo desarrollo con watch.
+- `npm test`: ejecuta las pruebas unitarias (`ng test`).
+
+## Pruebas
 
 ```bash
-ng e2e
+npm test
 ```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
