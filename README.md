@@ -1,25 +1,33 @@
 # JSONPlaceholderAPI
 
-Aplicación web creada con Angular 22.
+Aplicación Angular que consume la API pública de JSONPlaceholder para mostrar datos de ejemplo.
 
-## Estado actual del proyecto
+## ¿Qué hace actualmente?
 
-Actualmente el repositorio contiene una aplicación Angular en estado base (plantilla inicial del framework):
+En su estado actual, el proyecto funciona como un explorador básico de recursos de `https://jsonplaceholder.typicode.com/`.
 
-- Muestra una vista de bienvenida por defecto de Angular.
-- Define un `router-outlet`, pero no tiene rutas configuradas (`src/app/app.routes.ts` está vacío).
-- No implementa todavía lógica de consumo de API ni endpoints propios.
+Funcionalidades implementadas:
+
+- Consume recursos públicos desde JSONPlaceholder usando `HttpClient` de Angular.
+- Permite consultar tres tipos de recursos desde la interfaz:
+  - `posts`
+  - `users`
+  - `todos`
+- Muestra una lista de resultados para el recurso seleccionado.
+- Muestra estado de carga y mensaje de error si la consulta falla.
 
 ## Tecnologías usadas
 
 - Angular 22
 - TypeScript
 - SCSS
-- Vitest (a través de `ng test`)
+- RxJS
+- Vitest (`ng test`)
 
 ## Requisitos
 
-- Node.js y npm instalados
+- Node.js
+- npm
 
 ## Instalación
 
@@ -33,14 +41,20 @@ npm install
 npm start
 ```
 
-La aplicación quedará disponible en `http://localhost:4200/`.
+Luego abre `http://localhost:4200/`.
 
 ## Scripts disponibles
 
-- `npm start`: levanta el servidor de desarrollo (`ng serve`).
-- `npm run build`: genera el build de producción (`ng build`).
+- `npm start`: inicia servidor de desarrollo (`ng serve`).
+- `npm run build`: genera build de producción (`ng build`).
 - `npm run watch`: compila en modo desarrollo con watch.
-- `npm test`: ejecuta las pruebas unitarias (`ng test`).
+- `npm test`: ejecuta pruebas unitarias.
+
+## Uso
+
+1. Abre la aplicación en el navegador.
+2. Selecciona el recurso a consultar (`posts`, `users` o `todos`).
+3. Revisa los elementos cargados desde la API pública.
 
 ## Pruebas
 
