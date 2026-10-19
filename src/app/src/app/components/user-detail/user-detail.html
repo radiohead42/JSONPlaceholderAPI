@@ -1,0 +1,23 @@
+<div style="font-family: Arial, sans-serif; padding: 20px;">
+
+  @if (users()) {
+    <h2>Detalles de: {{ users()?.name }}</h2>
+    <div style="background: #f4f4f4; padding: 15px; border-radius: 8px;">
+      <p><strong>Email:</strong> {{ users()?.email }}</p>
+      <p><strong>Telefono:</strong> {{ users()?.phone }}</p>
+      <p><strong>Website:</strong> {{ users()?.website }}</p>
+    </div>
+
+    <br>
+    <button routerLink="/">Volver a la lista</button>
+    <button [routerLink]="['/user/edit', users()?.id]" style="background-color: #FF9800; color: white; border: none; padding: 10px; cursor: pointer; border-radius: 4px;">
+      Editar
+      </button>
+    <button (click)="onDelete()" style="background-color: #f44336; color: white; border: none; padding: 10px; cursor: pointer; border-radius: 4px;">
+      Eliminar Usuario
+    </button>
+    } @else {
+      <p>Cargando detalles del usuario...</p>
+    }
+
+</div>

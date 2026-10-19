@@ -1,0 +1,46 @@
+<div style="font-family: Arial, sans-serif; padding: 20px; max-width: 400px;">
+  <h2>{{ isEditMode ? 'Editar usuario' : 'Crear usuario nuevo' }}</h2>
+
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()" style="display: flex; flex-direction: column; gap: 15px;">
+
+    <div>
+      <label>Nombre Completo: *</label><br>
+      <input type="text" formControlName="name" placeholder="Ingrese su nombre completo">
+      @if (userForm.get('name')?.invalid && userForm.get('name')?.touched) {
+      <small style="color: red;">El nombre es obligatorio y debe tener al menos 3 letras.</small>
+      }
+    </div>
+    <div>
+      <label>Username: *</label><br>
+      <input type="text" formControlName="username" placeholder="Ej. juanp">
+
+      @if (userForm.get('username')?.invalid && userForm.get('username')?.touched) {
+      <small style="color: red;">El username es obligatorio.</small>
+      }
+    </div>
+
+    <div>
+      <label>Email: *</label><br>
+      <input type="email" formControlName="email" placeholder="Ej. juan@correo.com">
+
+      @if (userForm.get('email')?.invalid && userForm.get('email')?.touched) {
+      <small style="color: red;">Ingresa un correo electrónico válido.</small>
+      }
+    </div>
+
+    <div>
+      <label>Teléfono (Opcional):</label><br>
+      <input type="text" formControlName="phone" placeholder="Ej. 555-1234">
+    </div>
+
+    <div style="display: flex; gap: 10px;">
+      <button type="submit" style="background-color: #4CAF50; color: white; border: none; padding: 10px; cursor: pointer;">
+        {{ isEditMode ? 'Actualizar' : 'Crear' }}
+      </button>
+
+      <button type="button" [routerLink]="isEditMode ? ['/user', userId] : '/'" style="padding: 10px; cursor: pointer;">
+        Cancelar
+      </button>
+    </div>
+  </form>
+</div>
