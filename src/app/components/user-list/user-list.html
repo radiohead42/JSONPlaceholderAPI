@@ -1,26 +1,22 @@
-<div style="font-family: Arial, sans-serif; padding: 20px;">
-<h2>Lista de Usuarios desde la API </h2>
-<button routerLink="/user/create" style="margin-bottom: 20px; padding: 10px; background-color: #008CBA; color: white; border: none; cursor: pointer;">
-  ➕ Añadir Nuevo Usuario
-</button>
+<div>
+  <h2>Lista de Usuarios desde la API 🌐</h2>
+  <div style="text-align: center; margin-bottom: 25px;">
+    <button routerLink="/user/create">➕ Añadir Nuevo Usuario</button>
+  </div>
 
-@if (users()) {
-  <ul>
-    @for (user of users(); track user.id) {
-      <li style="margin-bottom: 10px;">
-        <strong>{{ user.name }}</strong>
-        <br>
-        <small>✉️ {{ user.email }} | 📞 {{ user.phone }}</small>
-        <a [routerLink]="['/user', user.id]" style="color: blue; text-decoration: none; font-size: 14px;">
-        🔍 Ver detalles completos
-        </a>
+  @if (users()) {
+    <ul>
+      @for (user of users(); track user.id) {
+        <li>
+          <strong>{{ user.name }}</strong> <br>
+          <small style="color: #64748b;">✉️ {{ user.email }} | 📞 {{ user.phone }}</small><br><br>
+          <a [routerLink]="['/user', user.id]">🔍 Ver detalles completos</a>
         </li>
-    } @empty {
-      <li>No hay usuarios disponibles.</li>
-    }
-  </ul>
-} @else {
-  <p>Cargando usuarios...</p>
-}
-
+      } @empty {
+        <li style="border-left-color: #ef4444;">No se encontraron usuarios. 🕵️‍♂️</li>
+      }
+    </ul>
+  } @else {
+    <p style="text-align: center;">Cargando datos de internet... ⏳</p>
+  }
 </div>

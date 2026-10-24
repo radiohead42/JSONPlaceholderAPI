@@ -1,1 +1,121 @@
-/* You can add global styles to this file, and also import other style files */
+/* Importar una fuente moderna de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f7f9;
+  color: #334155;
+  margin: 0;
+  padding: 30px 20px;
+  line-height: 1.6;
+}
+
+h2 {
+  color: #0f172a;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* =========================================
+   ESTILOS DE BOTONES
+   ========================================= */
+button {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white !important;
+  border: none !important;
+  padding: 10px 20px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  cursor: pointer;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3) !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4) !important;
+}
+
+/* =========================================
+   ESTILOS DE LISTAS Y TARJETAS (Detalle)
+   ========================================= */
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+li, .detail-card {
+  background: white;
+  margin-bottom: 15px;
+  padding: 20px 25px !important;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 4px solid #3b82f6;
+}
+
+li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+li strong {
+  font-size: 1.2rem;
+  color: #1e293b;
+}
+
+a {
+  color: #3b82f6 !important;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #1d4ed8 !important;
+}
+
+/* =========================================
+   ESTILOS DE FORMULARIOS E INPUTS
+   ========================================= */
+form {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  margin-bottom: 5px;
+}
+
+input:focus {
+  border-color: #3b82f6;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}

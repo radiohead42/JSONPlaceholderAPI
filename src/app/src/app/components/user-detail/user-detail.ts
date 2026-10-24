@@ -18,7 +18,7 @@ export class UserDetail {
 
   private userId = Number(this.route.snapshot.paramMap.get('id'));
 
-  users = toSignal<IUser>(this.userService.getUserById(this.userId));
+  user = toSignal<IUser>(this.userService.getUserById(this.userId));
 
   onDelete() {
     const confirmDelete = confirm('Estás seguro de que deseas eliminar este usuario?');
